@@ -1,107 +1,133 @@
-# Turbofan RUL Predictor
+# Turbofan Degradation Analysis & RUL Prediction
 
-Aerospace predictive maintenance project using NASA's CMAPSS Turbofan Engine Degradation Dataset. This project analyzes turbofan engine sensor readings, calculates Remaining Useful Life (RUL), and identifies engines that should be prioritized for maintenance before failure.
+Predictive-maintenance project for NASA CMAPSS-style turbofan engine degradation data. The pipeline calculates Remaining Useful Life (RUL), builds an explainable health index from sensor trends, trains a lightweight baseline RUL model, ranks engines by maintenance risk, and exports CSV, JSON, Markdown, and SVG reports.
 
-## Project Goal
+This repo is designed as a polished aerospace data-science portfolio project: small enough to run immediately, structured enough to extend to the full NASA CMAPSS dataset.
 
-The main question this project answers is:
+## Problem
 
-> Given turbofan engine sensor readings over time, how many cycles does an engine have left before failure?
+Turbofan engines degrade over operating cycles. Maintenance teams need to answer:
 
-## Dataset
+> Which engines are closest to failure, and how many cycles are likely left?
 
-The dataset is based on NASA's CMAPSS Turbofan Engine Degradation Dataset.
+The project treats each engine's final observed cycle as its failure point and computes:
 
-Key variables include:
-
-- `unit`: engine ID
-- `cycle`: operating cycle
-- `setting1`, `setting2`, `setting3`: engine operating conditions
-- `sensor1` through `sensor21`: engine sensor measurements
-- `RUL`: Remaining Useful Life
-
-This repo includes a small sample CMAPSS-style CSV so the project can run quickly. For a full project, replace the sample data with NASA's FD001 training data.
-
-## Workflow
-
-This project includes:
-
-- Data loading and cleaning
-- Remaining Useful Life calculation
-- Engine health scoring
-- Risk labeling for maintenance priority
-- Exploratory analysis and summary reporting
-- Results export to CSV and Markdown
-
-The larger Zerve workflow also included RUL trend visualization, rolling-window feature engineering, and a Gradient Boosting model for RUL prediction.
-
-## Model Result From Zerve Workflow
-
-A Gradient Boosting Regressor was trained to predict RUL from engine sensor data.
-
-Model results:
-
-- RMSE: 34.15 cycles
-- MAE: 24.77 cycles
-- R2: 0.729
-
-## Key Insight
-
-Rolling sensor trends were more useful than single sensor readings. Sensors such as `sensor4`, `sensor11`, and `sensor15` were strong indicators of engine degradation.
-
-## Run The Mini Project
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
+```text
+RUL = max_cycle_for_engine - current_cycle
 ```
 
-Run the standalone Python demo:
+## Demo Outputs
 
-```bash
-python turbofan_project.py
-```
+The sample run creates visual outputs that summarize engine degradation and maintenance priority.
 
-Run the CSV-based analysis:
+![RUL trend](docs/assets/demo/rul_trend.svg)
 
-```bash
-python src/analyze_turbofan.py
-```
+![Engine risk](docs/assets/demo/engine_risk.svg)
 
-Generated outputs are saved in the `results/` folder.
+## What It Demonstrates
 
-## Project Structure
+- CMAPSS-style data ingestion
+- Row-level Remaining Useful Life calculation
+- Sensor-based degradation health index
+- Risk bands for maintenance prioritization
+- Baseline RUL regression model
+- Exported analysis artifacts for review
+- Unit tests and GitHub Actions CI
+
+## Repository Structure
 
 ```text
 .
-├── README.md
-├── requirements.txt
-├── turbofan_project.py
 ├── data/
 │   └── sample_turbofan.csv
+├── docs/
+│   ├── assets/demo/
+│   └── portfolio_walkthrough.md
+├── results/
+│   └── .gitkeep
 ├── src/
-│   └── analyze_turbofan.py
-└── results/
-    ├── latest_engine_scores.csv
-    └── summary.md
+│   ├── analyze_turbofan.py
+│   └── turbofan_rul/
+│       ├── cli.py
+│       ├── data.py
+│       ├── features.py
+│       ├── model.py
+│       ├── pipeline.py
+│       ├── reporting.py
+│       └── visualization.py
+├── tests/
+│   └── test_pipeline.py
+├── pyproject.toml
+└── README.md
 ```
 
-## Recommendation
+## Quick Start
 
-Engines with low predicted RUL should be prioritized for inspection or maintenance. This helps reduce unexpected failures, improve safety, and support better maintenance planning.
+Install the package:
 
-## Tech Stack
+```bash
+python3 -m pip install -e .
+```
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Scikit-learn
-- Zerve
+Run the analysis on the included sample data:
+
+```bash
+turbofan-rul
+```
+
+Expected output:
+
+```text
+Turbofan RUL analysis complete
+Rows analyzed: 34
+Engines analyzed: 4
+RMSE: ... cycles
+MAE: ... cycles
+Output directory: /path/to/results
+```
+
+Generated files:
+
+- `results/latest_engine_scores.csv`
+- `results/enriched_cycles.csv`
+- `results/model_metrics.json`
+- `results/summary.md`
+- `results/rul_trend.svg`
+- `results/engine_risk.svg`
+
+## Run Against NASA CMAPSS Data
+
+The loader accepts the included CSV sample or a whitespace-delimited NASA-style file such as `train_FD001.txt`.
+
+```bash
+turbofan-rul \
+  --source data/raw/train_FD001.txt \
+  --output-dir results
+```
+
+Large NASA files should stay out of Git and live under `data/raw/`.
+
+## Example Summary Table
+
+The pipeline ranks the latest pre-failure observation for each engine:
+
+| Engine | Latest Cycle | RUL | Risk | Health Index | Predicted RUL |
+|---:|---:|---:|---|---:|---:|
+| 4 | 10 | 1 | critical | 13.255 | 0.3 |
+| 1 | 7 | 1 | critical | 12.3 | 0.9 |
+| 3 | 4 | 1 | critical | 11.434 | 0.9 |
+| 2 | 9 | 1 | critical | 10.925 | 1.7 |
+
+## Tests
+
+```bash
+python3 -m unittest discover -s tests
+```
+
+## Notes
+
+The included sample dataset is intentionally small so the project runs instantly. It demonstrates the complete workflow, but it is not a substitute for validating a production model on the full NASA CMAPSS FD001-FD004 datasets.
 
 ## License
 
-This project is licensed under the MIT License.
-
-NASA CMAPSS data belongs to its original source and is used for educational purposes.
+MIT License.

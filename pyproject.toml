@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "turbofan-degradation-rul"
+version = "0.1.0"
+description = "NASA CMAPSS-style turbofan degradation and remaining useful life analysis."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Alexander Alvarez" }
+]
+license = "MIT"
+dependencies = []
+
+[project.scripts]
+turbofan-rul = "turbofan_rul.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.unittest]
+start-directory = "tests"

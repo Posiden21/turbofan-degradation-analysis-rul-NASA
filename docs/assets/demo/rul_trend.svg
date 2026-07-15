@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520">
+<rect width="960" height="520" fill="#111827"/>
+<rect x="70" y="54" width="850" height="402" fill="#172033" stroke="#374151"/>
+<text x="30.0" y="34.0" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Remaining Useful Life Trend</text>
+<text x="30.0" y="500.0" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="400">Operating cycle</text>
+<text x="20.0" y="330.0" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="14" transform="rotate(-90 20.0 330.0)">Remaining useful life</text>
+<line x1="70" y1="375.6" x2="920" y2="375.6" stroke="#EF4444" stroke-dasharray="6 5" opacity="0.8"/>
+<text x="828.0" y="367.6" fill="#EF4444" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400">critical</text>
+<line x1="70" y1="255.0" x2="920" y2="255.0" stroke="#F59E0B" stroke-dasharray="6 5" opacity="0.8"/>
+<text x="828.0" y="247.0" fill="#F59E0B" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400">warning</text>
+<line x1="70.0" y1="456" x2="70.0" y2="462" stroke="#64748B"/>
+<text x="66.0" y="480.0" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">0</text>
+<line x1="147.3" y1="456" x2="147.3" y2="462" stroke="#64748B"/>
+<text x="143.3" y="480.0" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">1</text>
+<line x1="224.5" y1="456" x2="224.5" y2="462" stroke="#64748B"/>
+<text x="220.5" y="480.0" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">2</text>
+<line x1="301.8" y1="456" x2="301.8" y2="462" stroke="#64748B"/>
+<text x="297.8" y="480.0" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">3</text>
+<line x1="379.1" y1="456" x2="379.1" y2="462" stroke="#64748B"/>
+<text x="375.1" y="480.0" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">4</text>
+<line x1="456.4" y1="456" x2="456.4" y2="462" stroke="#64748B"/>
+<text x="452.4" y="480.0" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">5</text>
+<line x1="533.6" y1="456" x2="533.6" y2="462" stroke="#64748B"/>
+<text x="529.6" y="480.0" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">6</text>
+<line x1="610.9" y1="456" x2="610.9" y2="462" stroke="#64748B"/>
+<text x="606.9" y="480.0" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">7</text>
+<line x1="688.2" y1="456" x2="688.2" y2="462" stroke="#64748B"/>
+<text x="684.2" y="480.0" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">8</text>
+<line x1="765.5" y1="456" x2="765.5" y2="462" stroke="#64748B"/>
+<text x="761.5" y="480.0" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">9</text>
+<line x1="842.7" y1="456" x2="842.7" y2="462" stroke="#64748B"/>
+<text x="838.7" y="480.0" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">10</text>
+<line x1="920.0" y1="456" x2="920.0" y2="462" stroke="#64748B"/>
+<text x="916.0" y="480.0" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">11</text>
+<line x1="64" y1="456.0" x2="70" y2="456.0" stroke="#64748B"/>
+<text x="36.0" y="460.0" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">0</text>
+<line x1="64" y1="415.8" x2="70" y2="415.8" stroke="#64748B"/>
+<text x="36.0" y="419.8" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">1</text>
+<line x1="64" y1="375.6" x2="70" y2="375.6" stroke="#64748B"/>
+<text x="36.0" y="379.6" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">2</text>
+<line x1="64" y1="335.4" x2="70" y2="335.4" stroke="#64748B"/>
+<text x="36.0" y="339.4" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">3</text>
+<line x1="64" y1="295.2" x2="70" y2="295.2" stroke="#64748B"/>
+<text x="36.0" y="299.2" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">4</text>
+<line x1="64" y1="255.0" x2="70" y2="255.0" stroke="#64748B"/>
+<text x="36.0" y="259.0" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">5</text>
+<line x1="64" y1="214.8" x2="70" y2="214.8" stroke="#64748B"/>
+<text x="36.0" y="218.8" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">6</text>
+<line x1="64" y1="174.6" x2="70" y2="174.6" stroke="#64748B"/>
+<text x="36.0" y="178.6" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">7</text>
+<line x1="64" y1="134.4" x2="70" y2="134.4" stroke="#64748B"/>
+<text x="36.0" y="138.4" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">8</text>
+<line x1="64" y1="94.2" x2="70" y2="94.2" stroke="#64748B"/>
+<text x="36.0" y="98.2" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">9</text>
+<line x1="64" y1="54.0" x2="70" y2="54.0" stroke="#64748B"/>
+<text x="36.0" y="58.0" fill="#94A3B8" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="400">10</text>
+<polyline points="147.3,174.6 224.5,214.8 301.8,255.0 379.1,295.2 456.4,335.4 533.6,375.6 610.9,415.8 688.2,456.0" fill="none" stroke="#3B82F6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="696.2" y="460.0" fill="#3B82F6" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400">Engine 1</text>
+<polyline points="147.3,94.2 224.5,134.4 301.8,174.6 379.1,214.8 456.4,255.0 533.6,295.2 610.9,335.4 688.2,375.6 765.5,415.8 842.7,456.0" fill="none" stroke="#F97316" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="850.7" y="460.0" fill="#F97316" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400">Engine 2</text>
+<polyline points="147.3,295.2 224.5,335.4 301.8,375.6 379.1,415.8 456.4,456.0" fill="none" stroke="#22C55E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="464.4" y="460.0" fill="#22C55E" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400">Engine 3</text>
+<polyline points="147.3,54.0 224.5,94.2 301.8,134.4 379.1,174.6 456.4,214.8 533.6,255.0 610.9,295.2 688.2,335.4 765.5,375.6 842.7,415.8 920.0,456.0" fill="none" stroke="#E11D48" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="928.0" y="460.0" fill="#E11D48" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="400">Engine 4</text>
+</svg>
